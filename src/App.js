@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import { Page } from './views/Page';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // new imports
 import Signup from './authentication/Signup';
