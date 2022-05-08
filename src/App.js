@@ -5,19 +5,13 @@ import Signup from './authentication/Signup';
 import Login from './authentication/Login';
 import Home from './Home';
 function App() {
-  const [isAuthenticated,setIsAuthenticated] = useState(false);
-  useEffect(()=>{
-      setIsAuthenticated(localStorage.getItem('token'));
-  },[isAuthenticated])
   return(
     <Router>
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/signup" element={<Signup/>} />
+      <Route path="/" element={<Home/>}/>
+      <Route path="/signup" element={<Signup/>}/>
       <Route path="/login" element={<Login/>}/>
-      <Route path="/page" element={
-      isAuthenticated ? <Page/> : <Login/>
-      } />
+      <Route path="/page" element={<Page/>}/>
     </Routes>
     </Router>
   );
